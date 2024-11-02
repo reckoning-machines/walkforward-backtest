@@ -24,4 +24,6 @@ to do:
 - allow for user input for 'score'
 - add docstring comments
 - allow for feature engineering inside the class
+- convert to a pip installable module
+- test Process inheritance for runtime
 
