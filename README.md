@@ -20,6 +20,8 @@ vs predict and predict proba "as of" in a rollforward approach
 
 <img width="175" alt="image" src="https://github.com/user-attachments/assets/da96cf9b-4a50-47c3-af1e-ccbbe6cfb26e">
 
+the differences are material.
+
 to do:
 - allow for user input for 'score'
 - add docstring comments
