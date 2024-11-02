@@ -3,9 +3,9 @@ a class wrapper for scikit-learn predict and predict_proba for walk forward back
 
 scikit-learn classifiers have predict_proba and predict functions which can apply a fitted (trained) model against the full input dataset
 
-however, for purposes of time series, running the final trained model back against the full dataset is not "as of"
+however, for purposes of time series, running the final trained model back against the full dataset is not "as of" - the final trained model allows for leakage of future knowledge into past results
 
-rather, a time series approach would apply a new model up to a certain day, then yield a result, then the next day, and so on
+rather, a true time series approach would fit models in series - that is, apply the model up to a certain day, yield a result, store the result, then fit for the next day, and so on
 
 in an effort to reduce the O, or runtime greediness, of the class, we inherit from multiprocess Process
 
