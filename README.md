@@ -13,8 +13,10 @@ and, this is a work in process
 
 Example:
 predict and predict proba back propogated
+
 <img width="440" alt="image" src="https://github.com/user-attachments/assets/3532fbbd-8b29-4206-abcb-797c82d39ba4">
 
 vs predict and predict proba "as of" in a rollforward approach
+
 <img width="440" alt="image" src="https://github.com/user-attachments/assets/a8945f58-5e4e-4abd-8a75-cfeb7a0fc1e7">
 
