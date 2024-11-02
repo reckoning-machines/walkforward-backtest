@@ -1,5 +1,5 @@
 # walkforward-backtest
-a class wrapper for scikit-learn predict and predict_proba for walk forward backtest
+a class wrapper for scikit-learn predict and predict_proba for walk forward backtesting in time series analysis
 
 scikit-learn classifiers have predict_proba and predict functions which can apply a fitted (trained) model against the full input dataset
 
