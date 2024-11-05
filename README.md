@@ -28,8 +28,8 @@ Usage:
 
 
 to do:
-- allow for user input for 'score'
+- allow for user input for 'score' function (F1 or others)
 - test Process inheritance for runtime improvement if any
-- allow for feature engineering inside the class
+- allow for feature engineering inside the class (differencing)
 - convert to a pip installable library module
 
