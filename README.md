@@ -15,10 +15,15 @@ Example:
 predict and predict proba back propogated
 
 if __name__ == "__main__":
+
     dataset = pd.read_csv('dataset.csv')
+    
     classifier = LogisticRegression(random_state = 10)
+    
     clsWalkForward = WalkForward(classifier,dataset,'target',featureset_columns)
+    
     clsWalkForward.fit()
+    
     print(clsWalkForward.result_dataset.tail())
 
 <img width="440" alt="image" src="https://github.com/user-attachments/assets/3532fbbd-8b29-4206-abcb-797c82d39ba4">
