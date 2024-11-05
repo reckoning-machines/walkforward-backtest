@@ -12,7 +12,7 @@ In an effort to reduce the O, or runtime greediness, of the class, we inherit fr
 And, this is a work in process... see "to do" list below
 
 Example:
-predict and predict proba back propogated
+predict and predict proba back propogated, that is, the default
 
 <img width="440" alt="image" src="https://github.com/user-attachments/assets/3532fbbd-8b29-4206-abcb-797c82d39ba4">
 
