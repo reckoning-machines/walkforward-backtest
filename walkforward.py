@@ -88,3 +88,10 @@ class WalkForwardSingleton(multiprocessing.Process):
         self.singleton_dataset['y_pred'] = self.y_pred
         self.singleton_dataset['y_pred_proba'] = self.y_pred_proba
         return
+
+if __name__ == "__main__":
+    dataset = pd.read_csv('dataset.csv')
+    classifier = LogisticRegression(random_state = 10)
+    clsWalkForward = WalkForward(classifier,dataset,'target',featureset_columns)
+    clsWalkForward.fit()
+    print(clsWalkForward.result_dataset.tail())
