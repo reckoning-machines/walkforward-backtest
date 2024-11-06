@@ -90,8 +90,32 @@ class WalkForwardSingleton(multiprocessing.Process):
         return
 
 if __name__ == "__main__":
+    """
+    Read sample dataset, do some target arranging / feature engineering
+    """
     dataset = pd.read_csv('dataset.csv')
+    symbol = "JPM US"
+    featureset_columns = ['hyg_return', 'tlt_return', 'vb_return',
+        'vtv_return', 'vug_return', 'rut_return', 'spx_return', 'DGS10_return',
+        'DGS2_return', 'DTB3_return', 'DFF_return', 'T10Y2Y_return',
+        'T5YIE_return', 'BAMLH0A0HYM2_return', 'DEXUSEU_return', 'KCFSI_return',
+        'DRTSCILM_return', 'RSXFS_return', 'MARTSMPCSM44000USS_return',
+        'H8B1058NCBCMG_return', 'DCOILWTICO_return', 'VXVCLS_return',
+        'H8B1247NCBCMG_return', 'GASREGW_return',
+        'CSUSHPINSA_return', 'UNEMPLOY_return']
+
+    dataset = df.loc[df['symbol']==symbol]
+    dataset['target'] = dataset['target'].shift(-1)
+    prediction_record = dataset[-1:]
+    dataset =  dataset.iloc[:-1]
+    dataset[featureset_columns] = dataset[featureset_columns].diff(periods=1, axis=0)
+    dataset.dropna(inplace=True)
+
+    """
+    Send dataset and simple binary classifier into WalkForward object and fit
+    """
     classifier = LogisticRegression(random_state = 10)
     clsWalkForward = WalkForward(classifier,dataset,'target',featureset_columns)
     clsWalkForward.fit()
     print(clsWalkForward.result_dataset.tail())
+
