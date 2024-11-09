@@ -104,7 +104,7 @@ if __name__ == "__main__":
         'H8B1247NCBCMG_return', 'GASREGW_return',
         'CSUSHPINSA_return', 'UNEMPLOY_return']
 
-    dataset = df.loc[df['symbol']==symbol]
+    dataset = dataset.loc[dataset['symbol']==symbol]
     dataset['target'] = dataset['target'].shift(-1)
     prediction_record = dataset[-1:]
     dataset =  dataset.iloc[:-1]
