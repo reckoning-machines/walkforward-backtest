@@ -10,7 +10,7 @@ However, for purposes of time series, running the final trained model back again
 
 Rather, a true time series approach would fit models in series - that is, apply the model up to a certain day, yield a result, store the result, then fit for the next day, and so on
 
-Proposed usage:
+**Proposed usage:**
 
 import walkforward as wf 
 
@@ -26,7 +26,7 @@ result['weights'] = rolling list of weights
 
 result['models'] = rolling list of models
 
-Current Status:
+**Current Status:**
 
 A class wrapper for scikit-learn predict and predict_proba for walk forward backtesting in time series analysis
 
