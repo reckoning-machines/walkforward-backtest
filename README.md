@@ -2,6 +2,14 @@
 
 A proposed python library to add recordset walk forward for model fitting
 
+Purpose:
+
+Python library scikit-learn classifiers have predict_proba and predict functions which apply a fitted (trained) model against the input / training dataset
+
+However, for purposes of time series, running the final trained model back against the full dataset is not "as of" - the final trained model allows for leakage of future knowledge into past results
+
+Rather, a true time series approach would fit models in series - that is, apply the model up to a certain day, yield a result, store the result, then fit for the next day, and so on
+
 Proposed usage:
 
 import walkforward as wf 
@@ -21,14 +29,6 @@ result['models'] = rolling list of models
 Current Status:
 
 A class wrapper for scikit-learn predict and predict_proba for walk forward backtesting in time series analysis
-
-Purpose:
-
-Python library scikit-learn classifiers have predict_proba and predict functions which apply a fitted (trained) model against the input / training dataset
-
-However, for purposes of time series, running the final trained model back against the full dataset is not "as of" - the final trained model allows for leakage of future knowledge into past results
-
-Rather, a true time series approach would fit models in series - that is, apply the model up to a certain day, yield a result, store the result, then fit for the next day, and so on
 
 In an effort to reduce the O, or runtime greediness, of the class, we inherit from multiprocess Process
 
