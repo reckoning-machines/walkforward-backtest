@@ -2,7 +2,7 @@
 
 A proposed python library to add recordset walk forward for model fitting
 
-Purpose:
+**Purpose:**
 
 Python library scikit-learn classifiers have predict_proba and predict functions which apply a fitted (trained) model against the input / training dataset
 
