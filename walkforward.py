@@ -56,7 +56,7 @@ class WalkForward:
                 featureset_columns=self.featureset_columns,
             )
 
-            # user defined function
+            # user defined function return
             singleton_dataset, weights = clsWalkForwardSingleton.fit_model()
 
             incremental_end_x = incremental_end_x + 1

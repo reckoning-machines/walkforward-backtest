@@ -27,6 +27,8 @@ the differences are material.
 
 Usage:
 
+Modify the user defined function fit_model in the singleton, and apply your return values in the walkforward 'fit' method.  See comments in code.
+
 <img width="604" alt="image" src="https://github.com/user-attachments/assets/2eb49644-6b91-4683-8914-93a6bb169b68">
 
 
