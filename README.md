@@ -33,9 +33,7 @@ Modify the user defined function fit_model in the singleton, and apply your retu
 
 
 to do:
-- allow for user input for 'score' function (F1 or others)
 - support for multi-class classifiers
 - test Process inheritance for runtime improvement if any
-- allow for feature engineering inside the class (differencing)
-- convert to a pip installable library module
+- convert to a pip installable library module - will need ability for user defined feature engineering and fit_model function
 
