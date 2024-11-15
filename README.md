@@ -1,4 +1,19 @@
 # walkforward-backtest
+
+A proposed python library to add recordset walk forward for model fitting
+
+Proposed usage:
+
+import walkforward as wf 
+(your featureset prep here)
+result = wf.walkforward_backtest(classifier, dataset, date_column, target_column, feature_columns, window, train_test_split, scoring_function)
+result['score'] = rolling score
+result['fitted_recordset'] = dataset with predictions and predicted probabilities
+result['weights'] = rolling list of weights
+result['models'] = rolling list of models
+
+Current Status:
+
 A class wrapper for scikit-learn predict and predict_proba for walk forward backtesting in time series analysis
 
 Purpose:
